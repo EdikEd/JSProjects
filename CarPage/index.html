@@ -15,15 +15,15 @@
         <div class="menu w-100">
             <nav class="menu-nav w-100">
                 <ul class="menu-nav-list w-100">
-                    <li class="menu-nav-list-item">
+                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Cars')">
                         <span>Cars</span>
                         <i class="ph ph-car"></i>
                     </li>
-                    <li class="menu-nav-list-item">
+                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Favourite')">
                         <span>Favourite</span>
                         <i class="ph ph-star"></i>
                     </li>
-                    <li class="menu-nav-list-item">
+                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Compare')">
                         <span>Compare</span>
                         <i class="ph ph-arrows-left-right"></i>
                     </li>
@@ -33,8 +33,11 @@
     </div>
     <div class="content">
         <div class="content-header">
-            
+            <p class="content-header-title" id="content-header-title">Page title</p>
         </div>
     </div>
+    <script src="main.js">
+
+    </script>
 </body>
 </html>
