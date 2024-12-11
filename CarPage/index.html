@@ -15,15 +15,15 @@
         <div class="menu w-100">
             <nav class="menu-nav w-100">
                 <ul class="menu-nav-list w-100">
-                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Cars')">
+                    <li class="menu-nav-list-item" id="menu-item-cars" onclick="selectPage('Cars','menu-item-cars')">
                         <span>Cars</span>
                         <i class="ph ph-car"></i>
                     </li>
-                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Favourite')">
+                    <li class="menu-nav-list-item" id="menu-item-favourite" onclick="selectPage('Favourite','menu-item-favourite')">
                         <span>Favourite</span>
                         <i class="ph ph-star"></i>
                     </li>
-                    <li class="menu-nav-list-item" onclick="setContentHeaderTitle('Compare')">
+                    <li class="menu-nav-list-item" id="menu-item-compare" onclick="selectPage('Compare','menu-item-compare')">
                         <span>Compare</span>
                         <i class="ph ph-arrows-left-right"></i>
                     </li>
@@ -31,13 +31,26 @@
             </nav>
         </div>
     </div>
-    <div class="content">
+    <div class="content" id="Welcome">
         <div class="content-header">
-            <p class="content-header-title" id="content-header-title">Page title</p>
+            <p class="content-header-title" id="content-header-title">Welcome Page</p>
         </div>
-    </div>
-    <script src="main.js">
-
-    </script>
+        <div class="content-page" id="content-page">
+            <div class="flex w-100 h-100 items-center justify-center" id="welcome-page">
+                <p><i class="fz-XXL">Welcome to the Buy Car App!</i></p>
+            </div>
+            <div class="disp-none" id="cars-page">
+                Cars 
+            </div>
+            <div class="disp-none" id="favourite-page">
+                Favourite Cars
+            </div>
+            <div class="disp-none" id="compare-page">
+                Cars Comparison
+            </div>
+        </div>
+    </div>    
+    <script src="cars.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
