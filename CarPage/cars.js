@@ -1,32 +1,45 @@
 const cars = [
     {
-        brand: 'BMW',
-        model: 'BMW 3 Series',
-        modelYear: '2012'
+        id: '1',
+        brand: 'Toyota',
+        model: "Toyota Corolla",
+        modelYear: 2022,
+        fuel: "Petrol",
+        carBody: "Sedan",
+        color: "White",
+        mileage: "15,000 km"
     },
     {
-        brand: 'BMW',
-        model: 'BMW 5 Series',
-        modelYear: '2012'
+        id: '2',
+        brand: "Honda",
+        model: "Honda Civic",
+        modelYear: 2020,
+        fuel: "Diesel",
+        carBody: "Hatchback",
+        color: "Blue",
+        mileage: "30,000 km"
     },
     {
-        brand: 'BMW',
-        model: 'BMW X5',
-        modelYear: '2013'
+        id: '3',
+        brand: "BMW",
+        model: "BMW 3 Series",
+        modelYear: 2021,
+        fuel: "Petrol",
+        carBody: "Sedan",
+        color: "Black",
+        mileage: "20,000 km"
     },
     {
-        brand: 'Audi',
-        model: 'Audi A4',
-        modelYear: '2012'
-    },
-    {
-        brand: 'Audi',
-        model: 'Audi A5',
-        modelYear: '2013'
-    },
-    {
-        brand: 'Audi',
-        model: 'Audi A4',
-        modelYear: '2013'
-    },
+        id: '4',
+        brand: "Audi",
+        model: "Audi A4",
+        modelYear: 2022,
+        fuel: "Diesel",
+        carBody: "Sedan",
+        color: "Silver",
+        mileage: "15,000 km"
+    }
 ];
+
+let favouriteCars = [];
+let compareCars = [];

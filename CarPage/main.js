@@ -8,6 +8,56 @@ let carsPage = document.getElementById('cars-page');
 let favouritePage = document.getElementById('favourite-page');
 let comparePage = document.getElementById('compare-page');
 
+function generateCarList() {
+
+    let carList = document.getElementById('car-list');
+    cars.map((car) => carList.innerHTML += `<div class="car-card">
+        <div class="car-card-content">
+            <div class="car-placeholder-image">
+                <img src="vehicle-placeholder.png" class="car-image" alt="cat-placeholder">
+                <p class="text-center mt-1"><strong class="fz-L">${car.brand}</strong></p>
+            </div>
+            <div class="car-desc">
+                <p class="car-desc-item">
+                    <span><strong>Model</strong>:</span><span id="car-model">${car.model}</span>
+                </p>
+                <p class="car-desc-item">
+                    <strong>Model year</strong>:<span id="car-model-year">${car.modelYear}</span>
+                </p>
+                <p class="car-desc-item">
+                    <strong>Fuel</strong>:<span id="car-fuel">${car.fuel}</span>
+                </p>
+                <p class="car-desc-item">
+                    <strong>Car body</strong>:<span id="car-body">${car.carBody}</span>
+                </p>
+                <p class="car-desc-item">
+                    <strong>Color</strong>:<span id="car-color">${car.color}</span>
+                </p>
+                <p class="car-desc-item">
+                    <strong>Mileage</strong>:<span id="car-model">${car.mileage}</span>
+                </p>            
+            </div>
+        </div>
+        <div class="card-actions mt-1">
+            <button class="mr-1">Add to compare</button>
+            <button onclick="addToFavourites('${car.id}')">Add to favourites</button>
+        </div>
+    </div>`);
+}
+
+function addToFavourites(carId) {
+    favouriteCars.push(getElemByIdFromArr(cars,carId));
+    console.log(favouriteCars);
+}
+
+function getElemByIdFromArr(arr, elemId) {
+    return arr.filter((item) => item.id == elemId)[0];
+}
+
+function main() {
+    generateCarList();    
+}
+
 function selectPage(title, menuItemName) {
     menuItemCars.classList.remove('active');
     menuItemFavourite.classList.remove('active');
@@ -35,3 +85,6 @@ function selectPage(title, menuItemName) {
     }
     contentHeaderTitle.textContent = title;
 }
+
+
+main();

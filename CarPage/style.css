@@ -103,10 +103,79 @@ body {
     font-size: 24px;
 }
 
+.fz-XL {
+    font-size: 22px;
+}
+
+.fz-L {
+    font-size: 20px;
+}
+
 .disp-block {
     display: block;
 }
 
 .disp-none {
     display: none;
+}
+
+.content-page {
+    padding: 10px;
+}
+
+.car-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.car-image {
+    width: 100%;
+    max-width: 200px;
+}
+
+.car-placeholder-image {
+    width: 40%;
+}
+
+.car-card {
+    width: 30%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.car-card-content {
+    display: flex;
+}
+
+.car-desc {
+    width: 60%;
+    padding-left: 10px;
+}
+
+.car-desc-item {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mr-1 {
+    margin-right: 5px;
+}
+
+.card-actions {
+    width: 100%;
+    border-top: 1px solid lightgray;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: flex-end;
 }
