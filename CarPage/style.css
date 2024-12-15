@@ -196,3 +196,23 @@ body {
 .btn-info {
     background-color: rgb(146, 194, 226);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td:hover {
+    background-color: lightblue;
+}
+
+th {
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: rgb(219, 255, 219);
+}

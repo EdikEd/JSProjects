@@ -39,7 +39,7 @@ function generateCarList() {
             </div>
         </div>
         <div class="card-actions mt-1">
-            <button class="mr-1 btn btn-info">Add to compare</button>
+            <button class="mr-1 btn btn-info" onclick="addToComparison('${car.id}')">Add to compare</button>
             <button class="btn btn-warning" onclick="addToFavourites('${car.id}')">Add to favourites</button>
         </div>
     </div>`);
@@ -76,9 +76,30 @@ function generateFavourites() {
             </div>
         </div>
         <div class="card-actions mt-1">
-            <button class="mr-1 btn btn-info">Add to compare</button>            
+            <button class="mr-1 btn btn-info" onclick="addToComparison('${car.id}')">Add to compare</button>            
         </div>
     </div>`;
+}
+
+function generateComparisonCars() {
+    let compareTable = document.getElementById('compare-table')
+    let carToCompare = compareCars.pop();
+    compareTable.innerHTML += `
+            <tr>
+                <td>${carToCompare.model}</td>
+                <td>${carToCompare.brand}</td>
+                <td>${carToCompare.modelYear}</td>
+                <td>${carToCompare.fuel}</td>
+                <td>${carToCompare.carBody}</td>
+                <td>${carToCompare.color}</td>
+                <td>${carToCompare.mileage}</td>
+            </tr>        
+    `
+}
+
+function addToComparison(carId) {
+    compareCars.push(getElemByIdFromArr(cars,carId));
+    generateComparisonCars();
 }
 
 function addToFavourites(carId) {
