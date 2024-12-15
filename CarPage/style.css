@@ -179,3 +179,20 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
+.btn {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-warning {
+    background-color: rgb(255, 173, 65);
+}
+
+.btn-info {
+    background-color: rgb(146, 194, 226);
+}
